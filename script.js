@@ -10,7 +10,7 @@ let wind = document.querySelector("#wind");
 //#Start fetching
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  var city = document.querySelector("input").value;
+  var city = document.querySelector("input").value.trim();
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=38d943b53c1b122f4dbf1e928c37ea1f&units=metric`
   )
